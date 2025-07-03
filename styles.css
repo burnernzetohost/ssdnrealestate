@@ -1,0 +1,18 @@
+/* Tailwind variables and your custom rules */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F5DC; /* Beige */
+}
+.text-beige-dark { color: #A0522D; }
+.bg-beige-light { background-color: #F8F8F0; }
+.bg-beige-medium { background-color: #E0E0C0; }
+.border-beige-dark { border-color: #A0522D; }
+html { scroll-behavior: smooth; }
+
+/* Header hide/show */
+#site-header {
+  transition: transform 0.3s ease-in-out;
+}
+#site-header.hidden {
+  transform: translateY(-100%);
+}
