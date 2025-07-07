@@ -1,13 +1,31 @@
 /* Tailwind variables and your custom rules */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #F5F5DC; /* Beige */
+  background-color: #F2F1ED; /* New base color from user request */
 }
 .text-beige-dark { color: #A0522D; }
-.bg-beige-light { background-color: #F8F8F0; }
-.bg-beige-medium { background-color: #E0E0C0; }
+/* Custom colors for sections based on user's tints and shades */
+.bg-section-shade { background-color: #D8D6CC; } /* Shade 1 */
+.bg-section-tint { background-color: #FBF9F3; } /* Tint 1 */
+/* You can define more if needed, e.g., .bg-shade-darker { background-color: #C0BBA6; } */
+
 .border-beige-dark { border-color: #A0522D; }
-html { scroll-behavior: smooth; }
+
+/* Header scrolled background */
+.header-scrolled {
+  background-color: #F2F1ED; /* Color for header after leaving hero */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on header height (approx 80px for the current header) */
+  /* Removed: scroll-snap-type: y mandatory; */
+}
+section {
+  min-height: 100vh;
+  /* Removed: scroll-snap-align: start; */
+}
+
 
 /* Header hide/show */
 #site-header {
@@ -28,4 +46,20 @@ html { scroll-behavior: smooth; }
 .font-the-seasons {
     font-family: 'The Seasons', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added drop shadow */
+}
+
+.font-the-seasons1 {
+  font-family: "The Seasons", serif; /* Use "The Seasons" as the font name,...*/
+}
+
+/* Custom font for "Hiragino Mincho Pro" */
+@font-face {
+    font-family: 'Hiragino Mincho Pro';
+    src: url('images/Hiragino-Mincho-Pro-N-W3.ttf') format('truetype'); /* Adjust path if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-hiragino-mincho-pro {
+    font-family: 'Hiragino Mincho Pro', serif;
 }
