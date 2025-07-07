@@ -16,3 +16,16 @@ html { scroll-behavior: smooth; }
 #site-header.hidden {
   transform: translateY(-100%);
 }
+
+/* Custom font for "The Seasons" */
+@font-face {
+    font-family: 'The Seasons';
+    src: url('images/Fontspring-DEMO-theseasons-lt.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-the-seasons {
+    font-family: 'The Seasons', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added drop shadow */
+}
