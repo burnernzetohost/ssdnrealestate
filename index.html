@@ -4,38 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai Realty - Your Gateway to Elite Properties</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- External Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <!-- AOS Library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="text-gray-800 antialiased">
 
-    <!-- Header Section -->
     <header id="site-header" class="absolute top-0 w-full z-50 bg-transparent transition-transform">
         <div class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
-            <a href="#"><img src="images/Logo.png" alt="Dubai Realty Logo" class="w-32 h-auto"></a>
+            <a href="#"><img src="Logo.png" alt="Dubai Realty Logo" class="w-32 h-auto"></a>
             <nav class="hidden md:flex space-x-6">
                 <a href="#home" class="text-white hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Home</a>
+                <a href="#about-us" class="text-white hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">About Us</a>
                 <a href="#why-dubai" class="text-white hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Why Dubai</a>
                 <a href="#trusted-developers" class="text-white hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Trusted Developers</a>
                 <a href="#services" class="text-white hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Services</a>
                 <a href="#contact-us" class="text-white hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Contact Us</a>
             </nav>
-            <!-- Mobile menu button (Hamburger) -->
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-beige-dark bg-opacity-90 py-2">
             <a href="#home" class="block text-white hover:text-beige-light font-medium px-4 py-2">Home</a>
+            <a href="#about-us" class="block text-white hover:text-beige-light font-medium px-4 py-2">About Us</a>
             <a href="#why-dubai" class="block text-white hover:text-beige-light font-medium px-4 py-2">Why Dubai</a>
             <a href="#trusted-developers" class="block text-white hover:text-beige-light font-medium px-4 py-2">Trusted Developers</a>
             <a href="#services" class="block text-white hover:text-beige-light font-medium px-4 py-2">Services</a>
@@ -43,64 +38,58 @@
         </div>
     </header>
 
-    <main class="mt-0"> <!-- Adjust margin-top to clear fixed header -->
-
-        <!-- 1. Home Section -->
-        <section id="home" class="relative bg-center bg-cover h-screen flex items-center justify-center text-center p-4 rounded-xl shadow-xl"
+    <main class="mt-0"> <section id="home" class="relative bg-center bg-cover h-screen flex items-center justify-center text-center p-4 rounded-xl shadow-xl"
     style="background-image: url('images/skyline.jpeg');">
-    <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Overlay for text readability -->
-    <div class="relative z-10 text-white p-6 md:p-10 bg-beige-dark bg-opacity-70 rounded-xl shadow-2xl max-w-2xl">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Your Dream Home in Dubai Awaits</h1>
+    <div class="absolute inset-0 bg-black opacity-40"></div> <div class="relative z-10 text-white p-6 md:p-10 bg-beige-dark bg-opacity-70 rounded-xl shadow-2xl max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight font-the-seasons">Your Dream Home in Dubai Awaits</h1>
         <a href="#contact-us" class="inline-block bg-beige-light text-beige-dark font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105">
             Explore Properties
         </a>
     </div>
 </section>
 
+        <section id="about-us" class="container mx-auto py-16 px-4 md:px-8 bg-beige-light rounded-xl shadow-xl my-8 max-w-6xl" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-center text-beige-dark mb-12">About Us</h2>
+            <div class="text-center text-gray-700 text-lg md:text-xl leading-relaxed">
+                <p class="mb-4">Powered by a team of seasoned professionals with over 20 years of experience in Dubai's dynamic real estate market. Our in-depth knowledge, strategic insight, and unwavering commitment to excellence have earned us a reputation as a trusted and respected name in the industry.</p>
+                <p>We are proud to partner with all major developers in Dubai, providing our clients with exclusive access to a diverse portfolio of premium properties - including off-plan investments, luxury residences, commercial spaces, and rental solutions.</p>
+            </div>
+        </section>
 
-        <!-- 2. Why Dubai Section -->
         <section id="why-dubai" class="container mx-auto py-16 px-4 md:px-8 bg-beige-light rounded-xl shadow-xl my-8 max-w-6xl" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-center text-beige-dark mb-12">Why Dubai?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Reason 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium">
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-4">Economic Stability & Growth</h3>
+                    <h3 class="text-2xl font-semibold text-beige-dark mb-4 text-center">Economic Stability & Growth</h3>
                     <p class="text-gray-700">Dubai boasts a robust and diversified economy, attracting global investors and businesses. Its strategic location and forward-thinking policies ensure sustained growth.</p>
                 </div>
-                <!-- Reason 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium">
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-4">High Return on Investment</h3>
+                    <h3 class="text-2xl font-semibold text-beige-dark mb-4 text-center">High Return on Investment</h3>
                     <p class="text-gray-700">The city offers attractive rental yields and capital appreciation, making it a prime destination for real estate investment. Enjoy tax-free returns and a landlord-friendly environment.</p>
                 </div>
-                <!-- Reason 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium">
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-4">Luxury Lifestyle & Infrastructure</h3>
+                    <h3 class="text-2xl font-semibold text-beige-dark mb-4 text-center">Luxury Lifestyle & Infrastructure</h3>
                     <p class="text-gray-700">Experience world-class infrastructure, stunning architecture, and a luxurious lifestyle. Dubai provides unmatched amenities, from pristine beaches to high-end shopping and dining.</p>
                 </div>
-                <!-- Reason 4 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium">
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-4">Safe & Secure Environment</h3>
+                    <h3 class="text-2xl font-semibold text-beige-dark mb-4 text-center">Safe & Secure Environment</h3>
                     <p class="text-gray-700">Known for its low crime rates and high safety standards, Dubai offers a secure environment for residents and investors alike. It's truly a place where you can feel at peace.</p>
                 </div>
-                <!-- Reason 5 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium">
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-4">Global Hub & Connectivity</h3>
+                    <h3 class="text-2xl font-semibold text-beige-dark mb-4 text-center">Global Hub & Connectivity</h3>
                     <p class="text-gray-700">Dubai is a global aviation hub, connecting East and West. Its strategic location facilitates international business and travel, making it an ideal place for global citizens.</p>
                 </div>
-                <!-- Reason 6 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium">
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-4">Visa & Residency Benefits</h3>
+                    <h3 class="text-2xl font-semibold text-beige-dark mb-4 text-center">Visa & Residency Benefits</h3>
                     <p class="text-gray-700">Investing in Dubai real estate can open doors to long-term residency visas, offering unparalleled opportunities for individuals and families looking to relocate.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Trusted Developers Section -->
         <section id="trusted-developers" class="container mx-auto py-16 px-4 md:px-8 bg-beige-medium rounded-xl shadow-xl my-8 max-w-6xl" data-aos="fade-up">
   <h2 class="text-4xl font-bold text-center text-beige-dark mb-12">Our Trusted Developers</h2>
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
 
-    <!-- Emaar -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
         <img src="images/emaar.jpg" alt="Emaar" class="w-full h-full object-contain">
@@ -108,7 +97,6 @@
       <p class="text-beige-dark font-semibold text-xl text-center">Emaar</p>
     </div>
 
-    <!-- Damac -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
         <img src="images/damac.jpg" alt="Damac" class="w-full h-full object-contain">
@@ -116,7 +104,6 @@
       <p class="text-beige-dark font-semibold text-xl text-center">Damac</p>
     </div>
 
-    <!-- Sobha -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
         <img src="images/sobha.jpg" alt="Sobha" class="w-full h-full object-contain">
@@ -124,7 +111,6 @@
       <p class="text-beige-dark font-semibold text-xl text-center">Sobha</p>
     </div>
 
-    <!-- Nakheel -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
         <img src="images/nakheel.jpg" alt="Nakheel" class="w-full h-full object-contain">
@@ -132,7 +118,6 @@
       <p class="text-beige-dark font-semibold text-xl text-center">Nakheel</p>
     </div>
 
-    <!-- Meraas -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
         <img src="images/meraas.jpg" alt="Meraas" class="w-full h-full object-contain">
@@ -140,7 +125,6 @@
       <p class="text-beige-dark font-semibold text-xl text-center">Meraas</p>
     </div>
 
-    <!-- Omniyat -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
         <img src="images/omniyat.jpg" alt="Omniyat" class="w-full h-full object-contain">
@@ -148,10 +132,9 @@
       <p class="text-beige-dark font-semibold text-xl text-center">Omniyat</p>
     </div>
 
-    <!-- Nshama -->
     <div class="flex flex-col items-center space-y-2">
       <div class="rounded-lg shadow-md border-2 border-beige-dark w-36 h-36 md:w-48 md:h-48 bg-white flex items-center justify-center overflow-hidden">
-        <img src="images/nshama.jpg" alt="Nshama" class="w-full h-full object-contain">
+        <img src="images/nshama.jpg" alt="Nshama" class.content-contain">
       </div>
       <p class="text-beige-dark font-semibold text-xl text-center">Nshama</p>
     </div>
@@ -167,54 +150,39 @@
 </section>
 
 
-        <!-- 4. Services Section -->
         <section id="services" class="container mx-auto py-16 px-4 md:px-8 bg-beige-light rounded-xl shadow-xl my-8 max-w-6xl" data-aos="fade-up">
             <h2 class="text-4xl font-bold text-center text-beige-dark mb-12">Our Comprehensive Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium text-center">
-                    <div class="text-beige-dark text-5xl mb-4">🏠</div> <!-- Icon placeholder -->
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-3">Property Sales & Purchase</h3>
+                    <div class="text-beige-dark text-5xl mb-4">🏠</div> <h3 class="text-2xl font-semibold text-beige-dark mb-3">Property Sales & Purchase</h3>
                     <p class="text-gray-700">Assisting you through every step of buying or selling residential and commercial properties in Dubai.</p>
                 </div>
-                <!-- Service 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium text-center">
-                    <div class="text-beige-dark text-5xl mb-4">🔑</div> <!-- Icon placeholder -->
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-3">Property Management</h3>
+                    <div class="text-beige-dark text-5xl mb-4">🔑</div> <h3 class="text-2xl font-semibold text-beige-dark mb-3">Property Management</h3>
                     <p class="text-gray-700">Comprehensive management services including tenant acquisition, rent collection, and maintenance.</p>
                 </div>
-                <!-- Service 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium text-center">
-                    <div class="text-beige-dark text-5xl mb-4">💰</div> <!-- Icon placeholder -->
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-3">Investment Consultancy</h3>
+                    <div class="text-beige-dark text-5xl mb-4">💰</div> <h3 class="text-2xl font-semibold text-beige-dark mb-3">Investment Consultancy</h3>
                     <p class="text-gray-700">Expert advice on high-yield investment opportunities and market trends in Dubai's real estate.</p>
                 </div>
-                <!-- Service 4 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium text-center">
-                    <div class="text-beige-dark text-5xl mb-4">🏛️</div> <!-- Icon placeholder -->
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-3">Legal & Visa Assistance</h3>
+                    <div class="text-beige-dark text-5xl mb-4">🏛️</div> <h3 class="text-2xl font-semibold text-beige-dark mb-3">Legal & Visa Assistance</h3>
                     <p class="text-gray-700">Guidance through legal processes, property registration, and obtaining residency visas for investors.</p>
                 </div>
-                <!-- Service 5 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium text-center">
-                    <div class="text-beige-dark text-5xl mb-4">📈</div> <!-- Icon placeholder -->
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-3">Market Research & Analysis</h3>
+                    <div class="text-beige-dark text-5xl mb-4">📈</div> <h3 class="text-2xl font-semibold text-beige-dark mb-3">Market Research & Analysis</h3>
                     <p class="text-gray-700">Detailed reports and analysis to help you make informed decisions in the dynamic Dubai property market.</p>
                 </div>
-                <!-- Service 6 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-beige-medium text-center">
-                    <div class="text-beige-dark text-5xl mb-4">✨</div> <!-- Icon placeholder -->
-                    <h3 class="text-2xl font-semibold text-beige-dark mb-3">After-Sales Support</h3>
+                    <div class="text-beige-dark text-5xl mb-4">✨</div> <h3 class="text-2xl font-semibold text-beige-dark mb-3">After-Sales Support</h3>
                     <p class="text-gray-700">Dedicated support even after your purchase, ensuring a smooth transition and continued satisfaction.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 5. Contact Us Section -->
         <section id="contact-us" class="container mx-auto py-16 px-4 md:px-8 bg-beige-medium rounded-xl shadow-xl my-8 max-w-6xl" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-center text-beige-dark mb-12">Get in Touch</h2>
         <div class="flex flex-col lg:flex-row justify-center items-start gap-10">
-            <!-- Contact Form -->
             <div class="bg-white p-8 rounded-lg shadow-md border-2 border-beige-dark w-full lg:w-1/2 max-w-lg">
                 <form action="#" method="post" class="space-y-6">
                     <div>
@@ -242,7 +210,6 @@
 </button>
 
             </div>
-            <!-- Contact Info -->
             <div class="bg-white p-8 rounded-lg shadow-md border-2 border-beige-dark w-full lg:w-1/2 max-w-lg text-gray-700">
                 <h3 class="text-2xl font-semibold text-beige-dark mb-6">Our Contact Details</h3>
                 <div class="flex items-center mb-4">
@@ -264,7 +231,6 @@
         </div>
     </section>
 
-    <!-- External JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js" defer></script>
 </body>
