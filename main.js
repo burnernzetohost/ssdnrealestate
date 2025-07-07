@@ -1,30 +1,34 @@
 const header = document.getElementById('site-header');
-let lastScrollY = window.pageYOffset;
+// Header background change on scroll
+const heroSection = document.getElementById('home');
+// Already defined, but keeping for clarity
 
 window.addEventListener('scroll', () => {
-  const currentScrollY = window.pageYOffset;
-  if (currentScrollY > lastScrollY) {
-    // Scrolling down, hide header
-    header.classList.add('hidden');
-  } else {
-    // Scrolling up, show header
-    header.classList.remove('hidden');
+  if (heroSection) {
+    const heroHeight = heroSection.offsetHeight;
+    if (window.scrollY > heroHeight - header.offsetHeight) { // When top of header reaches past hero
+      header.classList.add('header-scrolled');
+      header.classList.remove('bg-transparent'); // Remove transparent background
+    } else {
+      header.classList.remove('header-scrolled');
+      header.classList.add('bg-transparent'); // Add transparent background
+    }
   }
-  lastScrollY = currentScrollY;
 });
+
 
 // Mobile menu toggle (Hamburger)
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
 mobileMenuButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.toggle('translate-x-full');
 });
 
 // Close mobile menu when a link is clicked
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.add('translate-x-full');
   });
 });
 
@@ -36,4 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
         easing: 'ease-out',     // Whether animation should happen only once - default
     });
 });
-
