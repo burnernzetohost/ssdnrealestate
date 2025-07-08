@@ -7,6 +7,7 @@ body {
 /* Custom colors for sections based on user's tints and shades */
 .bg-section-shade { background-color: #D8D6CC; } /* Shade 1 */
 .bg-section-tint { background-color: #FBF9F3; } /* Tint 1 */
+.bg-beige-light { background-color: #ebe9db; } /* The box*/
 /* You can define more if needed, e.g., .bg-shade-darker { background-color: #C0BBA6; } */
 
 .border-beige-dark { border-color: #A0522D; }
