@@ -22,10 +22,8 @@ html {
   scroll-padding-top: 80px; /* Adjust based on header height (approx 80px for the current header) */
   /* Removed: scroll-snap-type: y mandatory; */
 }
-section {
-  min-height: 100vh;
-  /* Removed: scroll-snap-align: start; */
-}
+
+/* Removed min-height from section to eliminate large blank spaces */
 
 
 /* Header hide/show */
@@ -63,4 +61,9 @@ section {
 
 .font-hiragino-mincho-pro {
     font-family: 'Hiragino Mincho Pro', serif;
+}
+
+/* Styles for the content wrapper when mobile menu is open (push effect from right) */
+#content-wrapper.menu-open-right {
+    transform: translateX(-256px); /* Shift content left by menu width (w-64 = 256px) */
 }
