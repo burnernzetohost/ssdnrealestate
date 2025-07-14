@@ -23,8 +23,6 @@ html {
   /* Removed: scroll-snap-type: y mandatory; */
 }
 
-/* Removed min-height from section to eliminate large blank spaces */
-
 
 /* Header hide/show */
 #site-header {
@@ -63,7 +61,47 @@ html {
     font-family: 'Hiragino Mincho Pro', serif;
 }
 
-/* Removed: Styles for the content wrapper when mobile menu is open (push effect from right) */
-/* #content-wrapper.menu-open-right {
-    transform: translateX(-256px);
-} */
+/* Hamburger icon animation (ONLY FOR MOBILE) */
+@media (max-width: 767px) { /* Applies to screens smaller than 768px (Tailwind's 'md' breakpoint) */
+    #mobile-menu-button {
+        display: flex; /* Only display flex on mobile */
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 24px; /* Adjust as needed */
+        height: 24px; /* Adjust as needed */
+        cursor: pointer;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+}
+
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: #92120C; /* Color of the hamburger lines */
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+#mobile-menu-button.menu-open .top-line {
+    transform: translateY(8px) rotate(45deg); /* Adjust translateY based on hamburger-line height and spacing */
+}
+
+#mobile-menu-button.menu-open .middle-line {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+#mobile-menu-button.menu-open .bottom-line {
+    transform: translateY(-8px) rotate(-45deg); /* Adjust translateY based on hamburger-line height and spacing */
+}
+
+/* Hero image position adjustment for mobile */
+@media (max-width: 767px) { /* Applies to screens smaller than 768px (Tailwind's 'md' breakpoint) */
+    #home {
+        background-position: 35% center; /* Shifts the background image 60% from the left. Adjust as needed. */
+    }
+}
