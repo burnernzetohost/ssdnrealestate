@@ -11,7 +11,7 @@
 </head>
 <body class="text-gray-800 antialiased">
 
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 py-2 transform translate-x-full transition-transform ease-in-out duration-300 overflow-y-auto md:hidden bg-transparent z-50">
+    <div id="mobile-menu" class="fixed top-5 right-0 h-full w-64 py-2 transform translate-x-full transition-transform ease-in-out duration-300 overflow-y-auto md:hidden bg-transparent z-[999]">
         <nav class="flex flex-col items-end pr-4">
             <a href="#home" class="block text-[#92120C] pt-12 hover:text-beige-light font-medium px-4 py-2">Home</a>
             <a href="#about-us" class="block text-[#92120C] hover:text-beige-light font-medium px-4 py-2">About Us</a>
@@ -26,29 +26,29 @@
 
     <div>
         <header id="site-header" class="fixed top-0 w-full z-50 bg-transparent transition-transform">
-            <div class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
-                <a href="#"><img src="images/Logo.png" alt="Dubai Realty Logo" class="w-32 h-auto"></a>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#home" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Home</a>
-                    <a href="#about-us" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">About Us</a>
-                    <a href="#why-dubai" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Why Dubai</a>
-                    <a href="#trusted-developers" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Trusted Developers</a>
-                    <a href="#services" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Services</a>
-                    <a href="#contact-us" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Contact Us</a>
-                </nav>
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white relative w-8 h-8 flex flex-col justify-around items-center">
-                    <span class="hamburger-line top-line"></span>
-                    <span class="hamburger-line middle-line"></span>
-                    <span class="hamburger-line bottom-line"></span>
-                </button>
-            </div>
-        </header>
+    <div class="flex justify-between items-center py-4 px-6 md:px-4 md:w-full">
+        <a href="#"><img src="images/Logo.png" alt="Dubai Realty Logo" class="w-32 h-auto"></a>
 
-        <main class="mt-0">
-            <section id="home" class="relative bg-center bg-cover h-screen flex items-center justify-center text-center p-4 shadow-xl"
+        <nav class="hidden md:flex space-x-6">
+            <a href="#home" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Home</a>
+            <a href="#about-us" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">About Us</a>
+            <a href="#why-dubai" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Why Dubai</a>
+            <a href="#trusted-developers" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Trusted Developers</a>
+            <a href="#services" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Services</a>
+            <a href="#contact-us" class="text-[#92120C] hover:text-beige-light font-medium px-3 py-2 rounded-md transition-colors">Contact Us</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none relative w-8 h-8 flex flex-col justify-around items-center">
+            <span class="hamburger-line top-line"></span>
+            <span class="hamburger-line middle-line"></span>
+            <span class="hamburger-line bottom-line"></span>
+        </button>
+    </div>
+</header>
+
+        <section id="home" class="relative bg-center bg-cover h-screen flex items-center justify-center text-center p-4 shadow-xl"
             style="background-image: url('images/skyline.png');">
             <div class="absolute inset-0 bg-black opacity-15"></div>
-            <div class="relative z-10 text-white p-6 md:p-10 max-w-2xl">
+            <div class="relative z-10 text-white p-6 md:p-10 max-w-2xl flex flex-col items-center" id="hero-content">
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight font-the-seasons">Your Dream Home in Dubai Awaits</h1>
                 <a href="#contact-us" class="inline-block bg-beige-light text-beige-dark font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:bg-white hover:text-gray-900 transition-all transform hover:scale-105">
                     Explore Properties
