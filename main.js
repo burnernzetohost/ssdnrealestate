@@ -23,6 +23,8 @@ const mobileMenuOverlay = document.getElementById('mobile-menu-overlay'); // Get
 mobileMenuButton.addEventListener('click', () => {
   // Toggle the 'translate-x-full' class on the mobile menu to slide it in/out
   mobileMenu.classList.toggle('translate-x-full');
+  // Toggle the 'menu-open' class on the hamburger button
+  mobileMenuButton.classList.toggle('menu-open');
 
   // Toggle the overlay visibility and pointer events
   if (mobileMenu.classList.contains('translate-x-full')) {
@@ -42,6 +44,7 @@ mobileMenu.querySelectorAll('a').forEach(link => {
     mobileMenu.classList.add('translate-x-full');
     mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
     mobileMenuOverlay.classList.remove('opacity-50');
+    mobileMenuButton.classList.remove('menu-open'); // Close animation
   });
 });
 
@@ -50,6 +53,7 @@ mobileMenuOverlay.addEventListener('click', () => {
     mobileMenu.classList.add('translate-x-full');
     mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
     mobileMenuOverlay.classList.remove('opacity-50');
+    mobileMenuButton.classList.remove('menu-open'); // Close animation
 });
 
 
