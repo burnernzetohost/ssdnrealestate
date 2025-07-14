@@ -63,7 +63,7 @@ html {
     font-family: 'Hiragino Mincho Pro', serif;
 }
 
-/* Styles for the content wrapper when mobile menu is open (push effect from right) */
-#content-wrapper.menu-open-right {
-    transform: translateX(-256px); /* Shift content left by menu width (w-64 = 256px) */
-}
+/* Removed: Styles for the content wrapper when mobile menu is open (push effect from right) */
+/* #content-wrapper.menu-open-right {
+    transform: translateX(-256px);
+} */
