@@ -4,12 +4,14 @@ body {
   background-color: #FBF9F3; /* New base color from user request */
 }
 .text-beige-dark { color: #173b5b; }
+.white { color: #FFFFFF; }
 /* .text-beige-dark { color: #0F3C65; } */
 /* Custom colors for sections based on user's tints and shades */
 .bg-section-shade { background-color: #D8D6CC; } /* Shade 1 */
 .bg-section-tint { background-color: #FBF9F3; } /* Tint 1 */
 .bg-beige-light { background-color: #ebe9db; } /* The box*/
 /* You can define more if needed, e.g., .bg-shade-darker { background-color: #C0BBA6; } */
+
 
 .border-beige-dark { border-color: #A0522D; }
 
@@ -102,7 +104,6 @@ html {
 
 
 /* Hero image position adjustment for mobile */
-/* Hero image position adjustment for mobile */
 @media (max-width: 767px) { /* Applies to screens smaller than 768px (Tailwind's 'md' breakpoint) */
     #home {
         background-position: 35% center; /* Shifts the background image 60% from the left. Adjust as needed. */
@@ -119,6 +120,23 @@ html {
         width: calc(100% - 2rem); /* Adjust width to account for padding/margins if needed, or set max-width */
         max-width: 400px; /* Limit width on small screens if it stretches too much */
     }
+
+    /* Mobile menu specific styles */
+    #mobile-menu a {
+        /* For webkit browsers (Chrome, Safari) */
+         /* 1px black stroke */
+        color: #ffffff; /* Make the text white to contrast with stroke */
+        /*text-shadow: 1px 1px 2px rgba(0,0,0, 0.4); /*Remove existing text shadow if any*/
+    }
+    
+
+    #mobile-menu-overlay.opacity-50 {
+    opacity: 0.5; /* Changed to 0 to make it invisible */
+    pointer-events: auto; /* Keeps it clickable for closing the menu */
+    }
+
+    /* Overlay for dimming the background */
+    
 }
 
 /* For larger screens (md and up), ensure hero content is centered as before */
