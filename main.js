@@ -29,12 +29,12 @@ mobileMenuButton.addEventListener('click', () => {
   // Toggle the overlay visibility and pointer events
   if (mobileMenu.classList.contains('translate-x-full')) {
     // Menu is closed, hide overlay
-    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
-    mobileMenuOverlay.classList.remove('opacity-50'); // Adjust opacity as desired, e.g., 50%
+    mobileMenuOverlay.classList.remove('opacity-50'); // Remove 50% opacity
+    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none'); // Hide and disable clicks
   } else {
     // Menu is open, show overlay
-    mobileMenuOverlay.classList.remove('opacity-0', 'pointer-events-none');
-    mobileMenuOverlay.classList.add('opacity-0'); // Adjust opacity as desired
+    mobileMenuOverlay.classList.remove('opacity-0', 'pointer-events-none'); // Make visible and clickable
+    mobileMenuOverlay.classList.add('opacity-50'); // Add 50% opacity
   }
 });
 
@@ -42,8 +42,8 @@ mobileMenuButton.addEventListener('click', () => {
 mobileMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.add('translate-x-full');
-    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
-    mobileMenuOverlay.classList.remove('opacity-50');
+    mobileMenuOverlay.classList.remove('opacity-50'); // Remove 50% opacity
+    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none'); // Hide and disable clicks
     mobileMenuButton.classList.remove('menu-open'); // Close animation
   });
 });
@@ -51,8 +51,8 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 // Close menu when clicking on the overlay
 mobileMenuOverlay.addEventListener('click', () => {
     mobileMenu.classList.add('translate-x-full');
-    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
-    mobileMenuOverlay.classList.remove('opacity-50');
+    mobileMenuOverlay.classList.remove('opacity-50'); // Remove 50% opacity
+    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none'); // Hide and disable clicks
     mobileMenuButton.classList.remove('menu-open'); // Close animation
 });
 
