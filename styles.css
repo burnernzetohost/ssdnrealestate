@@ -3,7 +3,8 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #FBF9F3; /* New base color from user request */
 }
-.text-beige-dark { color: #A0522D; }
+.text-beige-dark { color: #173b5b; }
+/* .text-beige-dark { color: #0F3C65; } */
 /* Custom colors for sections based on user's tints and shades */
 .bg-section-shade { background-color: #D8D6CC; } /* Shade 1 */
 .bg-section-tint { background-color: #FBF9F3; } /* Tint 1 */
@@ -81,7 +82,7 @@ html {
 .hamburger-line {
     width: 100%;
     height: 3px;
-    background-color: #92120C; /* Color of the hamburger lines */
+    background-color: #173b5b; /* Color of the hamburger lines */
     transition: all 0.3s ease-in-out;
     border-radius: 3px;
 }
