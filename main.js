@@ -64,4 +64,50 @@ document.addEventListener('DOMContentLoaded', () => {
         once: true,
         easing: 'ease-out',
     });
+
+    // --- Contact Form Submission Logic ---
+    const contactForm = document.getElementById('contactForm'); // **Ensure your HTML form has id="contactForm"**
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(contactForm);
+            // Ensure your input fields have 'name' attributes matching these keys
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const message = formData.get('message');
+
+            const submissionData = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            try {
+                const response = await fetch('https://contact-form-submission.vercel.app/real-estate-contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(submissionData)
+                });
+
+                if (response.ok) {
+                    alert('Your message has been sent successfully!');
+                    contactForm.reset(); // Clear the form fields
+                } else {
+                    const errorData = await response.json();
+                    alert(`There was an error sending your message: ${errorData.detail || response.statusText}`);
+                }
+            } catch (error) {
+                console.error('Error submitting contact form:', error);
+                alert('An unexpected error occurred. Please try again later.');
+            }
+        });
+    }
+    // --- End of Contact Form Submission Logic ---
 });
